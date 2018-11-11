@@ -55,12 +55,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 text-center mb-2">
-						<div class="top" data-aos="zoom-out-down">
+						<div class="top">
 							<h2>Art of Cakes</h2>
 							<h6>we create delicious memories</h6>
 							<p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed.</p>
 						</div>
-						<div class="bottom" data-aos="zoom-out-up">
+						<div class="bottom">
 							<h4>Chef Cook</h4>
 							<div class="chef_chef">
 								<span>Benito</span><img src="images/chef_image.png" alt="" /><span>Gaspare</span>
@@ -72,7 +72,7 @@
 					</div>
 					<div class="col-md-6 taste_good">
 						<div class="row">
-							<div class="col-6" data-aos="zoom-in-down">
+							<div class="col-6">
 								<img src="images/image1.jpg" class="img-fluid" alt="" />
 							</div>
 							<div class="col-6" data-aos="zoom-in-down">
@@ -100,7 +100,7 @@
 						<div class="col-sm-5 col-3">
 							
 						</div>
-						<div class="col-sm-7 col-9 pancakes" data-aos="fade-down">
+						<div class="col-sm-7 col-9 pancakes">
 							<div class="top">
 								<h3>Tasty pancakes</h3>
 								<h5>season favourite</h5>
@@ -144,7 +144,7 @@
 		<section class="breakfast_section">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-7 col-md-6" data-aos="zoom-out-up">
+					<div class="col-lg-7 col-md-6">
 						<h2>Breakfast</h2>
 						<h5>7am Breakfast? we’re open!</h5>
 						<div class="items">
@@ -165,7 +165,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-5 col-md-6 est_section text-center" data-aos="zoom-out-down">
+					<div class="col-lg-5 col-md-6 est_section text-center">
 						<h6><span class="est">EST.</span><span class="year">1893</span></h6>
 						<img src="images/line.png" class="img-fluid" alt="" />
 						<h2>Your morning <br/> Escape with Flair</h2>
@@ -184,26 +184,26 @@
 				<h6>the best sandwich you’ve ever tasted!</h6>
 				<div class="row">
 					<div class="col-md-4 items text-center">
-						<div class="single_item" data-aos="zoom-in-down">
+						<div class="single_item">
 							<img src="images/bottom_image_1.png" alt="" />
 							<h4>Class aptent</h4>
 							<p>Quot alienum persecuti ut eam, nam ad 
 							<br/> atqui primis nusquam.</p>
 						</div>
-						<div class="single_item" data-aos="zoom-in">
+						<div class="single_item">
 							<img src="images/bottom_image_2.png" alt="" />
 							<h4>Nulla eget</h4>
 							<p>Nullam dictum felis eu pede mollis 
 							<br/> pretium Integer tincidunt.</p>
 						</div>
-						<div class="single_item" data-aos="zoom-in-up">
+						<div class="single_item">
 							<img src="images/bottom_image_3.png" alt="" />
 							<h4>Sed nibh purus</h4>
 							<p> Aenean eleifend tellus leo ligula, 
 							<br/> porttitor eu, consequat vitae.</p>
 						</div>
 					</div>
-					<div class="col-md-8" data-aos="zoom-out">
+					<div class="col-md-8">
 						<div class="full_recipe">
 							<img src="images/sandwich.png" class="img-fluid img-thumbnail" alt="" />
 							<a href="#">FULL RECIPE</a>
@@ -261,13 +261,7 @@
 		<script type="text/javascript" src="slick/slick.js"></script>
 		<script type="text/javascript" src="js/aos.js"></script>
 		<script type="text/javascript">
-			
-				// For Animation On Scroll Effect
-				AOS.init({
-					duration:1800,
-				});
-				
-				
+							
 				// Slick Slider For Latest Work:
 				$('.secondary-slider').slick({
 					autoplay:true,
@@ -301,45 +295,37 @@
 				});
 				
 				
-				//For Smothly Scroll In My Page	Start		
-				// Select all links with hashes
 				$('a[href*="#"]')
-				  // Remove links that don't actually link to anything
 					.not('[href="#"]')
 					.not('[href="#0"]')
 					.click(function(event) {
-					// On-page links
 					if (
 						location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
 						&& 
 						location.hostname == this.hostname
 					) 
 					{
-						// Figure out element to scroll to
+						
 						var target = $(this.hash);
 						target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-						// Does a scroll target exist?
+						
 						if (target.length) {
-							// Only prevent default if animation is actually gonna happen
 							event.preventDefault();
 							$('html, body').animate({
 								scrollTop: target.offset().top
 							}, 1000, function() {
-							// Callback after animation
-							// Must change focus!
 							var $target = $(target);
 							$target.focus();
-							if ($target.is(":focus")) { // Checking if the target was focused
+							if ($target.is(":focus")) { 
 							return false;
 								} else {
-								$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-								$target.focus(); // Set focus again
+								$target.attr('tabindex','-1');
+								$target.focus();
 							};
 						});
 					  }
 					}
 				});
-				//For Smothly Scroll In My Page	End	
 			
 		</script>
 			
